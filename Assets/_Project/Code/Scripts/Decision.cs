@@ -8,7 +8,7 @@ namespace Polombia
     {
         private Consequence consequence;
         private List<Quote> duqueQuotes;
-        private News news;
+        private NewsManager news;
         private List<Card> consequenceCards;
     }
 }
