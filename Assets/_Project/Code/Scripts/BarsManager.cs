@@ -17,6 +17,10 @@ namespace Polombia
             GameManager.instance.OnBudgetChanged += UpdateBudgetBar;
             GameManager.instance.OnSupportChanged += UpdateSupportBar;
             GameManager.instance.OnApprovalChanged += UpdateApprovalBar;
+
+            GameManager.instance.budget = 100;
+            GameManager.instance.support = 100;
+            GameManager.instance.approval = 100;
         }
 
         public void UpdateBudgetBar(float value) =>

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +7,15 @@ namespace Polombia
 {
     public class Consequence : MonoBehaviour
     {
-        private float Budget;
-        private float Approval;
-        private float Support;
+        public float budget;
+        public float approval;
+        public float support;
+
+        public void ApplyConsequence()
+        {
+            GameManager.instance.budget += budget;
+            GameManager.instance.approval += approval;
+            GameManager.instance.support += support;
+        }
     }
 }

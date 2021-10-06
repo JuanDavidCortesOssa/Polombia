@@ -20,6 +20,7 @@ namespace Polombia
         public event Action<float> OnApprovalChanged;
 
         private float _budget;
+
         public float budget
         {
             set
@@ -31,6 +32,7 @@ namespace Polombia
         }
 
         private float _support;
+
         public float support
         {
             set
@@ -42,6 +44,7 @@ namespace Polombia
         }
 
         private float _approval;
+
         public float approval
         {
             set
@@ -51,6 +54,7 @@ namespace Polombia
             }
             get { return _approval; }
         }
+
         #endregion
 
         private void Awake()
@@ -64,12 +68,19 @@ namespace Polombia
             instance = this;
         }
 
+        private void Start()
+        {
+            
+        }
+
         #region DebugBars
 
         [Button]
         public void ChangeBudget(float value) => budget = value;
+
         [Button]
         public void ChangeSupport(float value) => support = value;
+
         [Button]
         public void Changepproval(float value) => approval = value;
 
