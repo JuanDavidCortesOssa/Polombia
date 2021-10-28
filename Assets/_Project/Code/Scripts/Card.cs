@@ -9,8 +9,10 @@ using UnityEngine.Serialization;
 
 namespace Polombia
 {
+    [CreateAssetMenu(menuName = "Polombia/Card SO", fileName = "Card_")]
     public class Card : MonoBehaviour
     {
+        public string CharacterName;
         private Character character;
         [InlineEditor] public List<Decision> decisions;
         public string questionString;

@@ -12,7 +12,7 @@ namespace Polombia
     {
         public Consequence consequence;
         private List<Quote> duqueQuotes;
-        private NewsManager news;
+        private NewsSO news;
         private List<Card> consequenceCards;
 
         public TMP_Text decisionText;
