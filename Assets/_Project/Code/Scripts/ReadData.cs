@@ -11,20 +11,22 @@ namespace Polombia
     public class ReadData : MonoBehaviour
     {
         public TextAsset json;
-        public List<Card> cards = new List<Card>();
         //const string path = "Assets/_Project/Level/SO/CardSo";
 
         [Button]
         public List<Card> LoadData()
         {
+            List<Card> cards = new List<Card>();
             var N = JSON.Parse(json.text);
             int i = 0;
-            while (N[0][i] != null)
+            while (N[i] != null)
             {
                 var character = N[i]["Character"].Value;
+                Debug.Log(character);
                 var question = N[i]["Question"].Value;
-
+                Debug.Log(question);
                 var decisionText1 = N[i]["Decision1"].Value.ToString();
+                Debug.Log(question);
                 float budget1 = N[i]["Budget1"].AsFloat;
                 float approval1 = N[i]["Aproval1"].AsFloat;
                 float support1 = N[i]["Support1"].AsFloat;
@@ -48,28 +50,30 @@ namespace Polombia
                 newCard.questionString = question;
                 newCard.decisions.Add(decision1);
                 newCard.decisions.Add(decision2);
-                //string pathName = i + "";
 
                 cards.Add(newCard);
+                i++;
+                Debug.Log(i);
 
 
-                //if (!Directory.Exists($"{path}"))
-                //{
-                //    //if it doesn't, create it
-                //    Directory.CreateDirectory($"{path}");
-                //}
+                //    if (!Directory.Exists($"{path}"))
+                //    {
+                //        //if it doesn't, create it
+                //        Directory.CreateDirectory($"{path}");
+                //    }
 
-                //AssetDatabase.CreateAsset(newCard, $"{path}\\{pathName}.asset");
+                //    AssetDatabase.CreateAsset(newCard, $"{path}\\{pathName}.asset");
 
-                //Debug.Log("Character: " + character + " " +
-                //    "Question: " + question + " " +
-                //    "Budget: " + budget1 + " " +
-                //    "Decision2: " + decision2 + " "
-                //    );
-                //i++;
-            }
+                //    Debug.Log("Character: " + character + " " +
+                //        "Question: " + question + " " +
+                //        "Budget: " + budget1 + " " +
+                //        "Decision2: " + decision2 + " "
+                //        );
 
-            return cards;
+
+                }
+
+                return cards;
         }
     }
 }

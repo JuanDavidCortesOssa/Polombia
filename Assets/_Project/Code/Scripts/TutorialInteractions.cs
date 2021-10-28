@@ -17,23 +17,27 @@ public class TutorialInteractions : MonoBehaviour
     public Button button2;
     public TextMeshProUGUI button2Txt;
 
-    private List<Card> cards;
+    public List<Card> cards;
     private int contador;
+
+    public ReadData readData;
 
     void Start()
     {
-        Addlisteners();
         InitializeVariables();
+        Addlisteners();
     }
 
     public void InitializeVariables()
     {
         contador = 0;
+        LoadQuestions();
     }
 
-    public void LoadQuestions(List<Card> newCards)
+    public void LoadQuestions()
     {
-        cards = newCards;
+        cards = new List<Card>();
+        cards = readData.LoadData();
         contador = 0;
         question.text = cards[0].questionString;
         button1Txt.text = cards[0].decisions[0].decisionString;
@@ -42,8 +46,20 @@ public class TutorialInteractions : MonoBehaviour
 
     public void Addlisteners()
     {
-        button1.onClick.AddListener(NextQuestion);
-        button2.onClick.AddListener(NextQuestion);
+        button1.onClick.AddListener(LeftAnswer);
+        button2.onClick.AddListener(RightAnswer);
+    }
+
+    private void LeftAnswer()
+    {
+        cards[contador].decisions[0].consequence.ApplyConsequence();
+        NextQuestion();
+    }
+
+    private void RightAnswer()
+    {
+        cards[contador].decisions[1].consequence.ApplyConsequence();
+        NextQuestion();
     }
 
     public void NextQuestion()
