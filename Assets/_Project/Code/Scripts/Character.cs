@@ -7,7 +7,7 @@ namespace Polombia
     public class Character : MonoBehaviour
     {
         private string name;
-        private List<Quote> quotes;
+        private AudioClip audioClip;
         private Animation animation;
     }
 }

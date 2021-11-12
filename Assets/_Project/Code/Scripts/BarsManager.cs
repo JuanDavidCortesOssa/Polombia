@@ -14,13 +14,13 @@ namespace Polombia
 
         private void Start()
         {
-            GameManager.instance.OnBudgetChanged += UpdateBudgetBar;
-            GameManager.instance.OnSupportChanged += UpdateSupportBar;
-            GameManager.instance.OnApprovalChanged += UpdateApprovalBar;
+            GameManager.Instance.OnBudgetChanged += UpdateBudgetBar;
+            GameManager.Instance.OnSupportChanged += UpdateSupportBar;
+            GameManager.Instance.OnApprovalChanged += UpdateApprovalBar;
 
-            GameManager.instance.budget = 50;
-            GameManager.instance.support = 50;
-            GameManager.instance.approval = 50;
+            GameManager.Instance.budget = 50;
+            GameManager.Instance.support = 50;
+            GameManager.Instance.approval = 50;
         }
 
         public void UpdateBudgetBar(float value) =>
@@ -31,12 +31,5 @@ namespace Polombia
 
         public void UpdateApprovalBar(float value) =>
             DOTween.To(() => approval.value, x => approval.value = x, value / 100, animationTime);
-
-        private void OnDestroy()
-        {
-            GameManager.instance.OnBudgetChanged -= UpdateBudgetBar;
-            GameManager.instance.OnSupportChanged -= UpdateSupportBar;
-            GameManager.instance.OnApprovalChanged -= UpdateApprovalBar;
-        }
     }
 }

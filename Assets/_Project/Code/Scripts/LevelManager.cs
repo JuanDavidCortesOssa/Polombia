@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using Polombia;
 
-public class TutorialInteractions : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
@@ -20,24 +20,23 @@ public class TutorialInteractions : MonoBehaviour
     public List<Card> cards;
     private int contador;
 
-    public ReadData readData;
-
     void Start()
     {
-        InitializeVariables();
         Addlisteners();
+        InitializeVariables();
+        LoadQuestions();
     }
 
     public void InitializeVariables()
     {
         contador = 0;
-        LoadQuestions();
     }
 
     public void LoadQuestions()
     {
         cards = new List<Card>();
-        cards = readData.LoadData();
+        cards = ReadData.Instance.LoadData();
+
         contador = 0;
         question.text = cards[0].questionString;
         button1Txt.text = cards[0].decisions[0].decisionString;

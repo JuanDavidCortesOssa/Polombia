@@ -20,9 +20,9 @@ namespace Polombia
 
         public void ApplyConsequence()
         {
-            GameManager.instance.budget += budget;
-            GameManager.instance.approval += approval;
-            GameManager.instance.support += support;
+            GameManager.Instance.budget += budget;
+            GameManager.Instance.approval += approval;
+            GameManager.Instance.support += support;
         }
     }
 }

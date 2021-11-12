@@ -6,12 +6,9 @@ using Sirenix.OdinInspector;
 
 namespace Polombia
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : Singleton<GameManager>
     {
-        public static GameManager instance;
-
         private List<Level> _levels;
-
 
         #region bars
 
@@ -59,13 +56,6 @@ namespace Polombia
 
         private void Awake()
         {
-            if (GameManager.instance != null)
-            {
-                Destroy(gameObject);
-                return;
-            }
-
-            instance = this;
         }
 
         private void Start()

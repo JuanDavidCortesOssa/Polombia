@@ -8,7 +8,7 @@ using UnityEditor;
 
 namespace Polombia
 {
-    public class ReadData : MonoBehaviour
+    public class ReadData : Singleton<ReadData>
     {
         public TextAsset json;
         //const string path = "Assets/_Project/Level/SO/CardSo";
@@ -54,23 +54,6 @@ namespace Polombia
                 cards.Add(newCard);
                 i++;
                 Debug.Log(i);
-
-
-                //    if (!Directory.Exists($"{path}"))
-                //    {
-                //        //if it doesn't, create it
-                //        Directory.CreateDirectory($"{path}");
-                //    }
-
-                //    AssetDatabase.CreateAsset(newCard, $"{path}\\{pathName}.asset");
-
-                //    Debug.Log("Character: " + character + " " +
-                //        "Question: " + question + " " +
-                //        "Budget: " + budget1 + " " +
-                //        "Decision2: " + decision2 + " "
-                //        );
-
-
                 }
 
                 return cards;
