@@ -8,6 +8,8 @@ namespace Polombia
 {
     public class GameManager : Singleton<GameManager>
     {
+        [SerializeField] private List<CharacterSO> characterSOs;
+        private List<Character> characters;
         private List<Level> _levels;
 
         #region bars
@@ -61,6 +63,36 @@ namespace Polombia
         private void Start()
         {
             
+        }
+
+        private void InitializeVariables()
+        {
+            characters = new List<Character>();
+        }
+
+        private void CreateCharacters()
+        {
+            for (int i = 0; i < characterSOs.Count; i++)
+            {
+                String name = characterSOs[i].name;
+                AudioClip audioClip = characterSOs[i].audioClip;
+                Sprite sprite = characterSOs[i].sprite;
+                Character character = new Character(name, audioClip, sprite);
+
+                characters.Add(character);
+            }
+        }
+
+        private Character GetCharacterByName(string name)
+        {
+            for (int i = 0; i < characters.Count; i++)
+            {
+                if (characters[i].name.Equals(name))
+                {
+                    return characters[i];
+                }
+            }
+            return null;
         }
 
         #region DebugBars

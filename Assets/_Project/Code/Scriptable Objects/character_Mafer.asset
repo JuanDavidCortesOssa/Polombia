@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ab5d4d7a47cb38479436a73fb09e2a8, type: 3}
-  m_Name: character_ElPaisa
+  m_Name: character_Mafer
   m_EditorClassIdentifier: 
-  name: El Paisa
+  name: Mafer
   audioClip: {fileID: 0}
-  sprite: {fileID: 21300000, guid: 82bbdf869f087e74d9de7d7848523808, type: 3}
+  sprite: {fileID: 21300000, guid: c831fce2c2dd16245bbc1d53d1dc0865, type: 3}

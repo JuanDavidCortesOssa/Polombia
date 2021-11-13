@@ -9,6 +9,6 @@ namespace Polombia
     {
         public string name;
         public AudioClip audioClip;
-        public Animation animation;
+        public Sprite sprite;
     }
 }

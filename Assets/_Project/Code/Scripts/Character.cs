@@ -8,7 +8,14 @@ namespace Polombia
     {
         private string name;
         private AudioClip audioClip;
-        private Animation animation;
+        private Sprite sprite;
+
+        public Character(string name, AudioClip audioClip, Sprite sprite)
+        {
+            this.name = name;
+            this.audioClip = audioClip;
+            this.sprite = sprite;
+        }
     }
 }
 
