@@ -9,17 +9,12 @@ public class LevelManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public TextMeshProUGUI question;
-
-    public TextMeshProUGUI button1Txt;
     public Button button1;
-
     public Button button2;
-    public TextMeshProUGUI button2Txt;
-
     public List<Card> cards;
     private int contador;
 
+    private UiManager uiManager;
     void Start()
     {
         Addlisteners();
@@ -30,6 +25,7 @@ public class LevelManager : MonoBehaviour
     public void InitializeVariables()
     {
         contador = 0;
+        uiManager = UiManager.Instance;
     }
 
     public void LoadQuestions()
@@ -38,9 +34,10 @@ public class LevelManager : MonoBehaviour
         cards = ReadData.Instance.LoadData();
 
         contador = 0;
-        question.text = cards[0].questionString;
-        button1Txt.text = cards[0].decisions[0].decisionString;
-        button2Txt.text = cards[0].decisions[1].decisionString;
+
+        uiManager.SetUiTexts(UiManager.TextUiType.Question, cards[0].questionString);
+        uiManager.SetUiTexts(UiManager.TextUiType.Button_1, cards[0].decisions[0].decisionString);
+        uiManager.SetUiTexts(UiManager.TextUiType.Button_2, cards[0].decisions[1].decisionString);
     }
 
     public void Addlisteners()
@@ -68,10 +65,11 @@ public class LevelManager : MonoBehaviour
         {
             contador = 0;
         }
-       
-        question.text = cards[contador].questionString;
-        button1Txt.text = cards[contador].decisions[0].decisionString;
-        button2Txt.text = cards[contador].decisions[1].decisionString;
+
+        uiManager.SetUiTexts(UiManager.TextUiType.Question, cards[contador].questionString);
+        Debug.Log(cards[contador].questionString);
+        uiManager.SetUiTexts(UiManager.TextUiType.Button_1, cards[contador].decisions[0].decisionString);
+        uiManager.SetUiTexts(UiManager.TextUiType.Button_2, cards[contador].decisions[1].decisionString);
     }
 
     // Update is called once per frame

@@ -22,11 +22,8 @@ namespace Polombia
             while (N[i] != null)
             {
                 var character = N[i]["Character"].Value;
-                Debug.Log(character);
                 var question = N[i]["Question"].Value;
-                Debug.Log(question);
                 var decisionText1 = N[i]["Decision1"].Value.ToString();
-                Debug.Log(question);
                 float budget1 = N[i]["Budget1"].AsFloat;
                 float approval1 = N[i]["Aproval1"].AsFloat;
                 float support1 = N[i]["Support1"].AsFloat;
@@ -53,7 +50,6 @@ namespace Polombia
 
                 cards.Add(newCard);
                 i++;
-                Debug.Log(i);
                 }
 
                 return cards;

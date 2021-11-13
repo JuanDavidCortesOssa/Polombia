@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,7 +7,7 @@ namespace Polombia
 {
     public class UiManager : Singleton<UiManager>
     {
-        [SerializeField] private TextMeshProUGUI question;
+        [SerializeField] public SuperTextMesh questionText;
         [SerializeField] private Image characterImage;
         [SerializeField] private TextMeshProUGUI button1Txt;
         [SerializeField] private TextMeshProUGUI button2Txt;
@@ -19,6 +18,12 @@ namespace Polombia
         {
             characterImage.sprite = sprite;
         }
+
+        //[Button]
+        //public void superTextTest()
+        //{
+        //    questionText._text = testText;
+        //}
 
         public void SetUiTexts(TextUiType textType, string text)
         {
@@ -31,7 +36,7 @@ namespace Polombia
                     button2Txt.text = text;
                     break;
                 case TextUiType.Question:
-                    question.text = text;
+                    questionText.text = text;
                     break;
                 default:
                     break;
