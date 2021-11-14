@@ -8,7 +8,9 @@ namespace Polombia
 {
     public class GameManager : Singleton<GameManager>
     {
-        [SerializeField] private List<CharacterSO> characterSOs;
+        public enum Characters {Petro, Vicky, Martuchis, mafer, ElPaisa}
+
+        private List<CharacterSO> characterSOs;
         private List<Character> characters;
         private List<Level> _levels;
 

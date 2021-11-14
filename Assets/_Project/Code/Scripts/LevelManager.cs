@@ -35,9 +35,10 @@ public class LevelManager : MonoBehaviour
 
         contador = 0;
 
-        uiManager.SetUiTexts(UiManager.TextUiType.Question, cards[0].questionString);
-        uiManager.SetUiTexts(UiManager.TextUiType.Button_1, cards[0].decisions[0].decisionString);
-        uiManager.SetUiTexts(UiManager.TextUiType.Button_2, cards[0].decisions[1].decisionString);
+        uiManager.SetUiTexts(UiManager.TextUiType.Question, cards[contador].questionString);
+        uiManager.SetUiTexts(UiManager.TextUiType.Button_1, cards[contador].decisions[0].decisionString);
+        uiManager.SetUiTexts(UiManager.TextUiType.Button_2, cards[contador].decisions[1].decisionString);
+        uiManager.SetCharacter(cards[0].CharacterName);
     }
 
     public void Addlisteners()
@@ -49,27 +50,33 @@ public class LevelManager : MonoBehaviour
     private void LeftAnswer()
     {
         cards[contador].decisions[0].consequence.ApplyConsequence();
+        cards.RemoveAt(contador);
         NextQuestion();
     }
 
     private void RightAnswer()
     {
         cards[contador].decisions[1].consequence.ApplyConsequence();
+        cards.RemoveAt(contador);
         NextQuestion();
     }
 
     public void NextQuestion()
     {
-        contador++;
+        //contador++;
         if (contador > cards.Count - 1)
         {
             contador = 0;
+            Debug.Log("se termina el juego");
+        }
+        else
+        {
+            uiManager.SetUiTexts(UiManager.TextUiType.Question, cards[contador].questionString);
+            uiManager.SetUiTexts(UiManager.TextUiType.Button_1, cards[contador].decisions[0].decisionString);
+            uiManager.SetUiTexts(UiManager.TextUiType.Button_2, cards[contador].decisions[1].decisionString);
+            uiManager.SetCharacter(cards[contador].CharacterName);
         }
 
-        uiManager.SetUiTexts(UiManager.TextUiType.Question, cards[contador].questionString);
-        Debug.Log(cards[contador].questionString);
-        uiManager.SetUiTexts(UiManager.TextUiType.Button_1, cards[contador].decisions[0].decisionString);
-        uiManager.SetUiTexts(UiManager.TextUiType.Button_2, cards[contador].decisions[1].decisionString);
     }
 
     // Update is called once per frame
