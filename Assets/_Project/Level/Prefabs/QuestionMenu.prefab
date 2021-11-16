@@ -2904,10 +2904,10 @@ MonoBehaviour:
   showAudioFoldout: 0
   showEventFoldout: 0
   uiMode: 1
-  _text: "<drawAnim=Stamp><c=white>hola a \xE1srd"
-  drawText: "hola a \xE1srd"
-  hyphenedText: "hola a \xE1srd"
-  font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+  _text: <drawAnim=Stamp><c=white>
+  drawText: 
+  hyphenedText: 
+  font: {fileID: 12800000, guid: 5815ce086985f454c87bad404252192d, type: 3}
   color:
     serializedVersion: 2
     rgba: 4294967295
@@ -2931,7 +2931,7 @@ MonoBehaviour:
   perlinPitchMulti: 1
   reading: 0
   unreading: 0
-  size: 32
+  size: 28
   quality: 64
   filterMode: 1
   style: 0
@@ -2949,12 +2949,12 @@ MonoBehaviour:
   textMat: {fileID: 2100000, guid: e490a80c3724140c0ad176edb075a09e, type: 2}
   textMesh: {fileID: 0}
   rawTopLeftBounds: {x: 244.51971, y: -67.40408, z: 0}
-  rawBottomRightBounds: {x: -244.51971, y: -35.404083, z: 0}
+  rawBottomRightBounds: {x: -244.51971, y: -67.40408, z: 0}
   topLeftBounds: {x: 378.78027, y: 467.6266, z: 0}
   topRightBounds: {x: 867.8197, y: 467.6266, z: 0}
-  bottomLeftBounds: {x: 378.78027, y: 435.6266, z: 0}
-  bottomRightBounds: {x: 867.8197, y: 435.6266, z: 0}
-  centerBounds: {x: 623.3, y: 451.6266, z: 0}
+  bottomLeftBounds: {x: 378.78027, y: 467.6266, z: 0}
+  bottomRightBounds: {x: 867.8197, y: 467.6266, z: 0}
+  centerBounds: {x: 623.3, y: 467.6266, z: 0}
   onCompleteEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2972,14 +2972,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   debugMode: 0
-  totalReadTime: 0.6000001
+  totalReadTime: 0
   totalUnreadTime: 0
   currentReadTime: 0
   autoRead: 1
   rememberReadPosition: 1
   drawOrder: 0
   latestNumber: -1
-  lowestLine: 0
+  lowestLine: -1
 --- !u!1 &6054803541132260084
 GameObject:
   m_ObjectHideFlags: 0
