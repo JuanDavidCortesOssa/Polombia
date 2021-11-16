@@ -14,11 +14,14 @@ namespace Polombia
         private List<Character> characters;
         private List<Level> _levels;
 
+        SceneManager sceneManager;
+
         #region bars
 
         public event Action<float> OnBudgetChanged;
         public event Action<float> OnSupportChanged;
         public event Action<float> OnApprovalChanged;
+        public event Action OnBarEmpty;
 
         private float _budget;
 
@@ -28,6 +31,10 @@ namespace Polombia
             {
                 _budget = Mathf.Clamp(value, 0, 100);
                 OnBudgetChanged.Invoke(_budget);
+                if(_budget == 0)
+                {
+                    OnBarEmpty.Invoke();
+                }
             }
             get { return _budget; }
         }
@@ -40,6 +47,10 @@ namespace Polombia
             {
                 _support = Mathf.Clamp(value, 0, 100);
                 OnSupportChanged.Invoke(_support);
+                if (_support == 0)
+                {
+                    OnBarEmpty.Invoke();
+                }
             }
             get { return _support; }
         }
@@ -52,6 +63,10 @@ namespace Polombia
             {
                 _approval = Mathf.Clamp(value, 0, 100);
                 OnApprovalChanged.Invoke(_approval);
+                if (_approval == 0)
+                {
+                    OnBarEmpty.Invoke();
+                }
             }
             get { return _approval; }
         }
@@ -60,6 +75,8 @@ namespace Polombia
 
         private void Awake()
         {
+            AddListeners();
+            sceneManager = SceneManager.Instance;
         }
 
         private void Start()
@@ -67,34 +84,9 @@ namespace Polombia
             
         }
 
-        private void InitializeVariables()
+        private void AddListeners()
         {
-            characters = new List<Character>();
-        }
-
-        private void CreateCharacters()
-        {
-            for (int i = 0; i < characterSOs.Count; i++)
-            {
-                String name = characterSOs[i].name;
-                AudioClip audioClip = characterSOs[i].audioClip;
-                Sprite sprite = characterSOs[i].sprite;
-                Character character = new Character(name, audioClip, sprite);
-
-                characters.Add(character);
-            }
-        }
-
-        private Character GetCharacterByName(string name)
-        {
-            for (int i = 0; i < characters.Count; i++)
-            {
-                if (characters[i].name.Equals(name))
-                {
-                    return characters[i];
-                }
-            }
-            return null;
+            OnBarEmpty += LoseGame;
         }
 
         #region DebugBars
@@ -107,6 +99,11 @@ namespace Polombia
 
         [Button]
         public void Changepproval(float value) => approval = value;
+
+        public void LoseGame()
+        {
+            sceneManager.GoToLose();
+        }
 
         #endregion
     }

@@ -13,11 +13,16 @@ public class LevelManager : MonoBehaviour
     public Button button2;
     public List<Card> cards;
     private int contador;
-
     private UiManager uiManager;
+    private ReadData readData;
     void Start()
     {
         Addlisteners();
+        
+    }
+
+    private void Awake()
+    {
         InitializeVariables();
         LoadQuestions();
     }
@@ -26,12 +31,15 @@ public class LevelManager : MonoBehaviour
     {
         contador = 0;
         uiManager = UiManager.Instance;
+        readData = ReadData.Instance;
     }
 
     public void LoadQuestions()
     {
+
         cards = new List<Card>();
-        cards = ReadData.Instance.LoadData();
+        Debug.Log(readData.tag);
+        cards = readData.LoadData();
 
         contador = 0;
 

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace Polombia
 {
-    public class SceneChanges : MonoBehaviour
+    public class SceneManager : Singleton<SceneManager>
     {
         public enum Scenes { MainMenu, Win, Lose, MainScene }
         //public Scenes scenes;
@@ -35,7 +35,7 @@ namespace Polombia
 
         private void ChangeScene(Scenes scene)
         {
-            SceneManager.LoadScene(scene.ToString());
+            UnityEngine.SceneManagement.SceneManager.LoadScene(scene.ToString());
         }
     }
 }
