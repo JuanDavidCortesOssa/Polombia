@@ -105,6 +105,11 @@ namespace Polombia
             sceneManager.GoToLose();
         }
 
+        public void WinGame()
+        {
+            sceneManager.GoToWin();
+        }
+
         #endregion
     }
 }

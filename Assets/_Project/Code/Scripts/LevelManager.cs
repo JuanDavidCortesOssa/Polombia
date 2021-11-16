@@ -15,6 +15,7 @@ public class LevelManager : MonoBehaviour
     private int contador;
     private UiManager uiManager;
     private ReadData readData;
+    private GameManager gameManager;
     void Start()
     {
         Addlisteners();
@@ -32,6 +33,7 @@ public class LevelManager : MonoBehaviour
         contador = 0;
         uiManager = UiManager.Instance;
         readData = ReadData.Instance;
+        gameManager = GameManager.Instance;
     }
 
     public void LoadQuestions()
@@ -75,7 +77,7 @@ public class LevelManager : MonoBehaviour
         if (contador > cards.Count - 1)
         {
             contador = 0;
-            Debug.Log("se termina el juego");
+            gameManager.WinGame();
         }
         else
         {
@@ -86,6 +88,8 @@ public class LevelManager : MonoBehaviour
         }
 
     }
+
+
 
     // Update is called once per frame
     void Update()
