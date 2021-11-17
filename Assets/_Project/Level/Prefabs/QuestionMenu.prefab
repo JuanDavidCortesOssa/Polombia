@@ -2901,12 +2901,16 @@ MonoBehaviour:
   showPositionFoldout: 1
   showTimingFoldout: 1
   showFunctionalityFoldout: 0
-  showAudioFoldout: 0
+  showAudioFoldout: 1
   showEventFoldout: 0
   uiMode: 1
-  _text: <drawAnim=Stamp><c=white>
-  drawText: 
-  hyphenedText: 
+  _text: <drawAnim=Stamp><c=white>Propongo que el precio de la gasolina suba 119
+    pesos y del ACPM 104 pesos
+  drawText: Propongo que el precio de la gasolina suba 119 pesos y del ACPM 104 pesos
+  hyphenedText: 'Propongo que el precio de la gasolina
+
+    suba 119 pesos y del
+    ACPM 104 pesos'
   font: {fileID: 12800000, guid: 5815ce086985f454c87bad404252192d, type: 3}
   color:
     serializedVersion: 2
@@ -2931,17 +2935,17 @@ MonoBehaviour:
   perlinPitchMulti: 1
   reading: 0
   unreading: 0
-  size: 28
+  size: 22
   quality: 64
   filterMode: 1
   style: 0
   baseOffset: {x: 0, y: 0, z: 0}
-  lineSpacing: 1
+  lineSpacing: 1.5
   characterSpacing: 0
-  tabSize: 4
+  tabSize: 2
   autoWrap: 12
   wrapText: 1
-  breakText: 1
+  breakText: 0
   insertHyphens: 1
   anchor: 0
   alignment: 0
@@ -2949,12 +2953,12 @@ MonoBehaviour:
   textMat: {fileID: 2100000, guid: e490a80c3724140c0ad176edb075a09e, type: 2}
   textMesh: {fileID: 0}
   rawTopLeftBounds: {x: 244.51971, y: -67.40408, z: 0}
-  rawBottomRightBounds: {x: -244.51971, y: -67.40408, z: 0}
+  rawBottomRightBounds: {x: -244.51971, y: -12.404083, z: 0}
   topLeftBounds: {x: 378.78027, y: 467.6266, z: 0}
   topRightBounds: {x: 867.8197, y: 467.6266, z: 0}
-  bottomLeftBounds: {x: 378.78027, y: 467.6266, z: 0}
-  bottomRightBounds: {x: 867.8197, y: 467.6266, z: 0}
-  centerBounds: {x: 623.3, y: 467.6266, z: 0}
+  bottomLeftBounds: {x: 378.78027, y: 412.6266, z: 0}
+  bottomRightBounds: {x: 867.8197, y: 412.6266, z: 0}
+  centerBounds: {x: 623.3, y: 440.1266, z: 0}
   onCompleteEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2972,14 +2976,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   debugMode: 0
-  totalReadTime: 0
+  totalReadTime: 3.6999977
   totalUnreadTime: 0
   currentReadTime: 0
   autoRead: 1
   rememberReadPosition: 1
   drawOrder: 0
   latestNumber: -1
-  lowestLine: -1
+  lowestLine: 1
 --- !u!1 &6054803541132260084
 GameObject:
   m_ObjectHideFlags: 0
