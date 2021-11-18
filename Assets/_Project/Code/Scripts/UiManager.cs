@@ -13,51 +13,35 @@ namespace Polombia
         [SerializeField] private TextMeshProUGUI button1Txt;
         [SerializeField] private TextMeshProUGUI button2Txt;
 
-        [SerializeField] private Sprite vicky;
-        [SerializeField] private Sprite petro;
-        [SerializeField] private Sprite martuchis;
-        [SerializeField] private Sprite mafer;
-        [SerializeField] private Sprite elPaisa;
-
         [SerializeField] private Animator characterAnimator;
 
         public enum TextUiType { Button_1, Button_2, Question, Year };
 
         public void SetCharacter(string characterName)
         {
-            Sprite characterSprite = GetCharacterSpriteByName(characterName);
-            if(characterSprite != null)
-            {
-                SetCharacterImage(characterSprite);
-            }
+            GetCharacterSpriteByName(characterName);
         }
 
-        public Sprite GetCharacterSpriteByName(string characterName)
+        public void GetCharacterSpriteByName(string characterName)
         {
             switch (characterName)
             {
                 case "Petro":
                     characterAnimator.SetInteger("Character", 3);
-                    return petro;
                     break;
                 case "Vicky":
                     characterAnimator.SetInteger("Character", 2);
-                    return vicky;
                     break;
                 case "Martuchis":
                     characterAnimator.SetInteger("Character", 0);
-                    return martuchis;
                     break;
                 case "Mafer":
                     characterAnimator.SetInteger("Character", 1);
-                    return mafer;
                     break;
                 case "ElPaisa":
                     characterAnimator.SetInteger("Character", 4);
-                    return elPaisa;
                     break;
                 default:
-                    return null;
                     break;
             }
         }
