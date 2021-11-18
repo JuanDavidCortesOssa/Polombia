@@ -24,7 +24,7 @@ public class LevelManager : Singleton<LevelManager>
     void Start()
     {
         Addlisteners();
-        uiManager.SetUiTexts(UiManager.TextUiType.Year, "AÑO # " + (InfoHack.levelNumber+1));
+        uiManager.SetUiTexts(UiManager.TextUiType.Year, "<w>AÑO # " + (InfoHack.levelNumber+1));
     }
 
     private void Awake()
