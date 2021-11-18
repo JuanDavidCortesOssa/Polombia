@@ -17,6 +17,10 @@ public class LevelManager : Singleton<LevelManager>
     private ReadData readData;
     private GameManager gameManager;
     public int levelNumber = new int();
+
+    //Duque
+    [SerializeField] private Animator duqueAnimator;
+
     void Start()
     {
         Addlisteners();
@@ -77,6 +81,7 @@ public class LevelManager : Singleton<LevelManager>
     {
         cards[contador].decisions[0].consequence.ApplyConsequence();
         cards.RemoveAt(contador);
+        StartCoroutine(DuqueAnimationCoroutine());
         NextQuestion();
     }
 
@@ -84,6 +89,7 @@ public class LevelManager : Singleton<LevelManager>
     {
         cards[contador].decisions[1].consequence.ApplyConsequence();
         cards.RemoveAt(contador);
+        StartCoroutine(DuqueAnimationCoroutine());
         NextQuestion();
     }
 
@@ -106,6 +112,17 @@ public class LevelManager : Singleton<LevelManager>
     }
 
 
+    IEnumerator DuqueAnimationCoroutine()
+    {
+        //Set true variable
+        duqueAnimator.SetBool("ButtonPressed", true);
+
+        //yield on a new YieldInstruction that waits for 1 seconds.
+        yield return new WaitForSeconds(1);
+
+        //Set false variable
+        duqueAnimator.SetBool("ButtonPressed", false);
+    }
 
     // Update is called once per frame
     void Update()

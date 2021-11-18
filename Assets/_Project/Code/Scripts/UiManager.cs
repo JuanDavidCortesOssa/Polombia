@@ -19,9 +19,6 @@ namespace Polombia
         [SerializeField] private Sprite mafer;
         [SerializeField] private Sprite elPaisa;
 
-        //Duque
-        [SerializeField] private Animator duqueAnimator;
-
         public enum TextUiType { Button_1, Button_2, Question, Year };
 
         public void SetCharacter(string characterName)
