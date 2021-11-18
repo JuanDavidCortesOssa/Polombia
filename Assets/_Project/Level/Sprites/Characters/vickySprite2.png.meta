@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 713b683c3d07ed043af8658266b193f8
+guid: d0636604dcc3fa3419d941c1368c4b19
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4548625095320473826
-    second: vickySprite 1_0
+      213: -4800401473172934116
+    second: vickySprite2_0
   - first:
-      213: 4247232996251979077
-    second: vickySprite 1_1
+      213: 8475816247218452971
+    second: vickySprite2_1
   - first:
-      213: 407041509001023615
-    second: vickySprite 1_2
+      213: 124265004678666801
+    second: vickySprite2_2
   - first:
-      213: -1100274452808214687
-    second: vickySprite 1_3
+      213: -3839168305505478959
+    second: vickySprite2_3
   - first:
-      213: 3853759623930316951
-    second: vickySprite 1_4
+      213: 6216995021922862416
+    second: vickySprite2_4
   - first:
-      213: 718936999504367077
-    second: vickySprite 1_5
+      213: 4902532325872371457
+    second: vickySprite2_5
   - first:
-      213: -5409791360123146344
-    second: vickySprite 1_6
+      213: 7779108507388714624
+    second: vickySprite2_6
   - first:
-      213: -8726987429639920360
-    second: vickySprite 1_7
+      213: 1833579569186868580
+    second: vickySprite2_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,169 +111,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vickySprite 1_0
+      name: vickySprite2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 625
+        width: 565
         height: 1080
-      alignment: 9
-      pivot: {x: 0.4649123, y: 0.58799}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e0110fac66ff1f30800000000000000
-      internalID: 4548625095320473826
+      spriteID: c12f3443b4c816db0800000000000000
+      internalID: -4800401473172934116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vickySprite 1_1
+      name: vickySprite2_1
       rect:
         serializedVersion: 2
-        x: 625
+        x: 565
         y: 0
-        width: 625
+        width: 565
         height: 1080
-      alignment: 9
-      pivot: {x: 0.4649122, y: 0.58799}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54dcae348e331fa30800000000000000
-      internalID: 4247232996251979077
+      spriteID: be9b0f458f520a570800000000000000
+      internalID: 8475816247218452971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vickySprite 1_2
+      name: vickySprite2_2
       rect:
         serializedVersion: 2
-        x: 1250
+        x: 1130
         y: 0
-        width: 625
+        width: 565
         height: 1080
-      alignment: 9
-      pivot: {x: 0.476608, y: 0.58799}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7058d8881a16a500800000000000000
-      internalID: 407041509001023615
+      spriteID: 13a52e50d5a79b100800000000000000
+      internalID: 124265004678666801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vickySprite 1_3
+      name: vickySprite2_3
       rect:
         serializedVersion: 2
-        x: 1878
+        x: 1695
         y: 0
-        width: 625
+        width: 565
         height: 1080
-      alignment: 9
-      pivot: {x: 0.4766078, y: 0.58799}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 167dde4f63a0bb0f0800000000000000
-      internalID: -1100274452808214687
+      spriteID: 1d6586554c888bac0800000000000000
+      internalID: -3839168305505478959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vickySprite 1_4
+      name: vickySprite2_4
       rect:
         serializedVersion: 2
-        x: 2500
+        x: 2260
         y: 0
-        width: 625
+        width: 565
         height: 1080
-      alignment: 9
-      pivot: {x: 0.44151992, y: 0.58799}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7980c1ab5fd4b7530800000000000000
-      internalID: 3853759623930316951
+      spriteID: 055851c8804374650800000000000000
+      internalID: 6216995021922862416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vickySprite 1_5
+      name: vickySprite2_5
       rect:
         serializedVersion: 2
-        x: 3125
+        x: 2825
         y: 0
-        width: 625
+        width: 565
         height: 1080
-      alignment: 9
-      pivot: {x: 0.44151953, y: 0.58798987}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5edc757546d2af900800000000000000
-      internalID: 718936999504367077
+      spriteID: 1070e77fc2b490440800000000000000
+      internalID: 4902532325872371457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vickySprite 1_6
+      name: vickySprite2_6
       rect:
         serializedVersion: 2
-        x: 3750
+        x: 3390
         y: 0
-        width: 625
+        width: 565
         height: 1080
-      alignment: 9
-      pivot: {x: 0.45321602, y: 0.58799}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89fe1e69b6f8ce4b0800000000000000
-      internalID: -5409791360123146344
+      spriteID: 08e9f14d8f1f4fb60800000000000000
+      internalID: 7779108507388714624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vickySprite 1_7
+      name: vickySprite2_7
       rect:
         serializedVersion: 2
-        x: 4375
+        x: 3955
         y: 0
-        width: 625
+        width: 565
         height: 1080
-      alignment: 9
-      pivot: {x: 0.45321563, y: 0.58799}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81563099b2383e680800000000000000
-      internalID: -8726987429639920360
+      spriteID: 46d0cc847ee227910800000000000000
+      internalID: 1833579569186868580
       vertices: []
       indices: 
       edges: []
@@ -281,7 +281,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3ec852874bd3f714385ae83cb574ef93
+    spriteID: 9d925844dab27c942b16c6232607717a
     internalID: 0
     vertices: []
     indices: 
