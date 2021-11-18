@@ -3119,7 +3119,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   richText: 1
-  readDelay: 0.05
+  readDelay: 0.1
   speedReadScale: 2
   ignoreTimeScale: 1
   disableAnimatedText: 0
@@ -3157,11 +3157,11 @@ MonoBehaviour:
   textMesh: {fileID: 0}
   rawTopLeftBounds: {x: 244.51971, y: -67.40408, z: 0}
   rawBottomRightBounds: {x: -244.51971, y: -12.404083, z: 0}
-  topLeftBounds: {x: 380.65527, y: 467.6266, z: 0}
-  topRightBounds: {x: 869.6947, y: 467.6266, z: 0}
-  bottomLeftBounds: {x: 380.65527, y: 412.6266, z: 0}
-  bottomRightBounds: {x: 869.6947, y: 412.6266, z: 0}
-  centerBounds: {x: 625.175, y: 440.1266, z: 0}
+  topLeftBounds: {x: 333.15527, y: 464.8141, z: 0}
+  topRightBounds: {x: 822.1947, y: 464.8141, z: 0}
+  bottomLeftBounds: {x: 333.15527, y: 409.8141, z: 0}
+  bottomRightBounds: {x: 822.1947, y: 409.8141, z: 0}
+  centerBounds: {x: 577.675, y: 437.3141, z: 0}
   onCompleteEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3179,7 +3179,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   debugMode: 0
-  totalReadTime: 3.6999977
+  totalReadTime: 7.2999954
   totalUnreadTime: 0
   currentReadTime: 0
   autoRead: 1
