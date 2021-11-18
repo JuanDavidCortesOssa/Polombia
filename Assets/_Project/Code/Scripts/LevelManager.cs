@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using Polombia;
 
-public class LevelManager : MonoBehaviour
+public class LevelManager : Singleton<LevelManager>
 {
     // Start is called before the first frame update
 
@@ -16,10 +16,11 @@ public class LevelManager : MonoBehaviour
     private UiManager uiManager;
     private ReadData readData;
     private GameManager gameManager;
+    public int levelNumber = new int();
     void Start()
     {
         Addlisteners();
-        
+        uiManager.SetUiTexts(UiManager.TextUiType.Year, "AÑO # " + (InfoHack.levelNumber+1));
     }
 
     private void Awake()
@@ -38,10 +39,25 @@ public class LevelManager : MonoBehaviour
 
     public void LoadQuestions()
     {
-
         cards = new List<Card>();
-        Debug.Log(readData.tag);
-        cards = readData.LoadData();
+        int level = (InfoHack.levelNumber + 1);
+
+        if (level == 1)
+        {
+            cards = readData.LoadData(ReadData.Level.Level1);
+
+        }
+        else
+        {
+            if (level == 2)
+            {
+                cards = readData.LoadData(ReadData.Level.Level2);
+            }
+            else
+            {
+                cards = readData.LoadData(ReadData.Level.Level3);
+            }
+        }
 
         contador = 0;
 

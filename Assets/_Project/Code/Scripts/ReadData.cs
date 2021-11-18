@@ -10,14 +10,28 @@ namespace Polombia
 {
     public class ReadData : Singleton<ReadData>
     {
-        public TextAsset json;
+        public TextAsset json1;
+        public TextAsset json2;
+        public TextAsset json3;
         //const string path = "Assets/_Project/Level/SO/CardSo";
+        public enum Level {Level1, Level2, Level3}
 
         [Button]
-        public List<Card> LoadData()
+        public List<Card> LoadData(Level level)
         {
             List<Card> cards = new List<Card>();
-            var N = JSON.Parse(json.text);
+            var N = JSON.Parse(json1.text);
+            switch (level)
+            {
+                case Level.Level2:
+                    N = JSON.Parse(json2.text);
+                    break;
+                case Level.Level3:
+                    N = JSON.Parse(json3.text);
+                    break;
+                default:
+                    break;
+            }
             int i = 0;
             while (N[i] != null)
             {

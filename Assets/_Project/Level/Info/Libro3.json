@@ -1,0 +1,16 @@
+[
+{"Character":"ElPaisa","Question":"Dos soldados fueron secuestrados por disidencias de las FARC-EP ¿Qué harás?","Quotes1":"","New1":"","Cards1":"","Decision1":"dialogar","Budget1":"0","Aproval1":"10","Support1":"10","Quotes2":"","New2":"","Cards2":"","Decision2":"Usar la fuerza","Budget2":"-20","Aproval2":"-10","Support2":"15"}
+,
+{"Character":"Vicky","Question":"El ciclista colombiano Ivan Ramiro Sosa se corono campeón de la competencia francesa Tour La Provence 2021","Quotes1":"","New1":"","Cards1":"","Decision1":"Felicitar","Budget1":"0","Aproval1":"10","Support1":"10","Quotes2":"","New2":"","Cards2":"","Decision2":"No actuar","Budget2":"0","Aproval2":"-10","Support2":"0"},
+{"Character":"Petro","Question":"Ya crearon las primeras vacunas para prevenir el COVID-19","Quotes1":"","New1":"","Cards1":"","Decision1":"Pedir vacunas","Budget1":"-20","Aproval1":"20","Support1":"10","Quotes2":"","New2":"","Cards2":"","Decision2":"No pedir","Budget2":"0","Aproval2":"-20","Support2":"-10"},
+{"Character":"Vicky","Question":"La Jurisdicción Especial para la Paz (JEP), presentó informe sobre los falsos positivos indicando en 6.402 las víctimas reconocidas oficialmente, hasta el momento en el periodo 2002-2008.","Quotes1":"","New1":"","Cards1":"","Decision1":"Investigar","Budget1":"-10","Aproval1":"20","Support1":"10","Quotes2":"","New2":"","Cards2":"","Decision2":"No actuar","Budget2":"0","Aproval2":"-20","Support2":"15"}
+,
+{"Character":"Petro","Question":"La Defensoria de Pueblo, presenta un informe de 753 líderes sociales fueron asesinados en Colombia de 2016 a 2020. ¿Que harás?","Quotes1":"","New1":"","Cards1":"","Decision1":"Proteger lideres","Budget1":"-10","Aproval1":"20","Support1":"10","Quotes2":"","New2":"","Cards2":"","Decision2":"No actuar","Budget2":"0","Aproval2":"-20","Support2":"10"}
+,
+{"Character":"Petro","Question":"Informe de la Defensoría del Pueblo denuncia que 11.500 personas han sido víctimas de desplazamiento forzado en Colombia durante el presente año.","Quotes1":"","New1":"","Cards1":"","Decision1":"Ayudar","Budget1":"-10","Aproval1":"20","Support1":"10","Quotes2":"","New2":"","Cards2":"","Decision2":"No actuar","Budget2":"0","Aproval2":"-20","Support2":"0"}
+,
+{"Character":"Duque","Question":"Propongo un proyecto de ley para ampliar el periodo presidencial del presidente, congresistas y alcaldes","Quotes1":"","New1":"","Cards1":"","Decision1":"Proponer idea","Budget1":"0","Aproval1":"-20","Support1":"20","Quotes2":"","New2":"","Cards2":"","Decision2":"No actuar","Budget2":"0","Aproval2":"0","Support2":"-20"},
+{"Character":"ElPaisa","Question":"La minga indígena ha empezado a marchar, ¿Qué deseas hacer?","Quotes1":"","New1":"","Cards1":"","Decision1":"Escuchar","Budget1":"0","Aproval1":"20","Support1":"-10","Quotes2":"","New2":"","Cards2":"","Decision2":"Usar la fuerza","Budget2":"-10","Aproval2":"-20","Support2":"10"}
+,
+{"Character":"Vicky","Question":"Paro Nacional en Colombia de 2021 indefinido ha sido convocado contra la reforma tributaria","Quotes1":"","New1":"","Cards1":"","Decision1":"Escuchar","Budget1":"0","Aproval1":"20","Support1":"-10","Quotes2":"","New2":"","Cards2":"","Decision2":"Usar la fuerza","Budget2":"-20","Aproval2":"-20","Support2":"10"}
+]

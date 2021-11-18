@@ -103,11 +103,19 @@ namespace Polombia
         public void LoseGame()
         {
             sceneManager.GoToLose();
+            InfoHack.levelNumber = 0;
         }
 
         public void WinGame()
         {
             sceneManager.GoToWin();
+            InfoHack.levelNumber++;
+        }
+
+        [Button]
+        public void DebugLevel()
+        {
+            Debug.Log(InfoHack.levelNumber);
         }
 
         #endregion

@@ -8,6 +8,7 @@ namespace Polombia
     public class UiManager : Singleton<UiManager>
     {
         [SerializeField] public SuperTextMesh questionText;
+        [SerializeField] public SuperTextMesh yearText;
         [SerializeField] private Image characterImage;
         [SerializeField] private TextMeshProUGUI button1Txt;
         [SerializeField] private TextMeshProUGUI button2Txt;
@@ -18,7 +19,7 @@ namespace Polombia
         [SerializeField] private Sprite mafer;
         [SerializeField] private Sprite elPaisa;
 
-        public enum TextUiType { Button_1, Button_2, Question };
+        public enum TextUiType { Button_1, Button_2, Question, Year };
 
         public void SetCharacter(string characterName)
         {
@@ -71,6 +72,9 @@ namespace Polombia
                     break;
                 case TextUiType.Question:
                     questionText.text = text;
+                    break;
+                case TextUiType.Year:
+                    yearText.text = text;
                     break;
                 default:
                     break;
