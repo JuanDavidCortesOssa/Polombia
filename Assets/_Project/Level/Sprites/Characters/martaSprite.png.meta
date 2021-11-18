@@ -1,31 +1,55 @@
 fileFormatVersion: 2
-guid: 239be9c142d5b5948828f9c4ca384461
+guid: b5ea7ce1b8fcd2c4884416d14f4730e9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8663988961292803243
-    second: vickySprite_0
+      213: 1517477163075133916
+    second: martaSprite_0
   - first:
-      213: 3008478571688701589
-    second: vickySprite_1
+      213: 6277036727952741800
+    second: martaSprite_1
   - first:
-      213: 7075343033004221140
-    second: vickySprite_2
+      213: -7375740402681801065
+    second: martaSprite_2
   - first:
-      213: -213963170067697490
-    second: vickySprite_3
+      213: -7679289162681698782
+    second: martaSprite_3
   - first:
-      213: 5775413734584151428
-    second: vickySprite_4
+      213: 3976371208999647316
+    second: martaSprite_4
   - first:
-      213: 1769353192792026780
-    second: vickySprite_5
+      213: 6172639117403708729
+    second: martaSprite_5
   - first:
-      213: -2030399213628438868
-    second: vickySprite_6
+      213: -5530219542122320828
+    second: martaSprite_6
   - first:
-      213: -537537065639690488
-    second: vickySprite_7
+      213: -3857575807803333739
+    second: martaSprite_7
+  - first:
+      213: -5848813200527909216
+    second: martaSprite_0
+  - first:
+      213: -479952593137588604
+    second: martaSprite_1
+  - first:
+      213: 1049578522661858619
+    second: martaSprite_2
+  - first:
+      213: 3878301116307931135
+    second: martaSprite_3
+  - first:
+      213: 4362239828994715899
+    second: martaSprite_4
+  - first:
+      213: -5289922420369252508
+    second: martaSprite_5
+  - first:
+      213: -9076003948975125988
+    second: martaSprite_6
+  - first:
+      213: 6732680101083078957
+    second: martaSprite_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,12 +135,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vickySprite_0
+      name: martaSprite_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 625
+        width: 697
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -125,19 +149,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bac53c77e0cac3870800000000000000
-      internalID: 8663988961292803243
+      spriteID: cd16cdb90792f0510800000000000000
+      internalID: 1517477163075133916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vickySprite_1
+      name: martaSprite_1
       rect:
         serializedVersion: 2
-        x: 625
+        x: 697
         y: 0
-        width: 625
+        width: 697
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -146,19 +170,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59e21e3425340c920800000000000000
-      internalID: 3008478571688701589
+      spriteID: 8a514bb95a38c1750800000000000000
+      internalID: 6277036727952741800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vickySprite_2
+      name: martaSprite_2
       rect:
         serializedVersion: 2
-        x: 1250
+        x: 1394
         y: 0
-        width: 625
+        width: 697
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -167,19 +191,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d26042700ba03260800000000000000
-      internalID: 7075343033004221140
+      spriteID: 79697ae9e2b14a990800000000000000
+      internalID: -7375740402681801065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vickySprite_3
+      name: martaSprite_3
       rect:
         serializedVersion: 2
-        x: 1875
+        x: 2091
         y: 0
-        width: 625
+        width: 697
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -188,19 +212,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea0391561a9d70df0800000000000000
-      internalID: -213963170067697490
+      spriteID: 226b9d2713fad6590800000000000000
+      internalID: -7679289162681698782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vickySprite_4
+      name: martaSprite_4
       rect:
         serializedVersion: 2
-        x: 2500
+        x: 2788
         y: 0
-        width: 625
+        width: 697
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -209,19 +233,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48decc03134662050800000000000000
-      internalID: 5775413734584151428
+      spriteID: 458b38ffb88ee2730800000000000000
+      internalID: 3976371208999647316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vickySprite_5
+      name: martaSprite_5
       rect:
         serializedVersion: 2
-        x: 3125
+        x: 3485
         y: 0
-        width: 625
+        width: 697
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -230,19 +254,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9e629aba510e8810800000000000000
-      internalID: 1769353192792026780
+      spriteID: 93d578fb29e99a550800000000000000
+      internalID: 6172639117403708729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vickySprite_6
+      name: martaSprite_6
       rect:
         serializedVersion: 2
-        x: 3750
+        x: 4182
         y: 0
-        width: 625
+        width: 697
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -251,19 +275,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca6c1773ca292d3e0800000000000000
-      internalID: -2030399213628438868
+      spriteID: 44c20e570a6b043b0800000000000000
+      internalID: -5530219542122320828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vickySprite_7
+      name: martaSprite_7
       rect:
         serializedVersion: 2
-        x: 4375
+        x: 4879
         y: 0
-        width: 625
+        width: 697
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -272,8 +296,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80fb0f403e84a88f0800000000000000
-      internalID: -537537065639690488
+      spriteID: 593edb9bd33277ac0800000000000000
+      internalID: -3857575807803333739
       vertices: []
       indices: 
       edges: []
@@ -281,7 +305,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ac4377f3882e0b14195fd2ed57e07d00
+    spriteID: 52158bae51e6e3a4baf3bbbb0081a565
     internalID: 0
     vertices: []
     indices: 
