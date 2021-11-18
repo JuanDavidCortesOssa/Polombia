@@ -5,7 +5,7 @@ namespace Polombia
 {
     public class SceneManager : Singleton<SceneManager>
     {
-        public enum Scenes { MainMenu, Win, Lose, MainScene }
+        public enum Scenes { MainMenu, Win, Lose, MainScene, Wi2 }
         //public Scenes scenes;
 
         public void GoToMainMenu()
@@ -21,6 +21,11 @@ namespace Polombia
         public void GoToWin()
         {
             ChangeScene(Scenes.Win);
+        }
+
+        public void GoToWin2()
+        {
+            ChangeScene(Scenes.Wi2);
         }
 
         public void GoToMainScene()

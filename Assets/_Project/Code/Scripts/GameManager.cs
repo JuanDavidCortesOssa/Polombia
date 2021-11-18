@@ -108,8 +108,16 @@ namespace Polombia
 
         public void WinGame()
         {
-            sceneManager.GoToWin();
-            InfoHack.levelNumber++;
+            if (InfoHack.levelNumber > 1)
+            {
+                sceneManager.GoToWin2();
+                InfoHack.levelNumber = 0;
+            }
+            else
+            {
+                sceneManager.GoToWin();
+                InfoHack.levelNumber++;
+            }
         }
 
         [Button]
