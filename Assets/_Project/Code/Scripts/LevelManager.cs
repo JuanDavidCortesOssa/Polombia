@@ -17,7 +17,7 @@ public class LevelManager : Singleton<LevelManager>
     private ReadData readData;
     private GameManager gameManager;
     public int levelNumber = new int();
-
+    //public AudioSource duqueQuote;
     //Duque
     [SerializeField] private Animator duqueAnimator;
 
@@ -81,7 +81,6 @@ public class LevelManager : Singleton<LevelManager>
     {
         cards[contador].decisions[0].consequence.ApplyConsequence();
         cards.RemoveAt(contador);
-        StartCoroutine(DuqueAnimationCoroutine());
         NextQuestion();
     }
 
@@ -89,12 +88,12 @@ public class LevelManager : Singleton<LevelManager>
     {
         cards[contador].decisions[1].consequence.ApplyConsequence();
         cards.RemoveAt(contador);
-        StartCoroutine(DuqueAnimationCoroutine());
         NextQuestion();
     }
 
     public void NextQuestion()
     {
+        StartCoroutine(DuqueAnimationCoroutine());
         //contador++;
         if (contador > cards.Count - 1)
         {
@@ -111,6 +110,11 @@ public class LevelManager : Singleton<LevelManager>
 
     }
 
+    public void ExecuteDuqueQuote()
+    {
+        //duqueQuote.Play();
+    }
+
 
     IEnumerator DuqueAnimationCoroutine()
     {
@@ -122,11 +126,5 @@ public class LevelManager : Singleton<LevelManager>
 
         //Set false variable
         duqueAnimator.SetBool("ButtonPressed", false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
