@@ -20,12 +20,6 @@ TextureImporter:
   - first:
       213: 139601313989507799
     second: cabalSPRITE_5
-  - first:
-      213: -5869306763547607960
-    second: cabalSPRITE_6
-  - first:
-      213: -142502604879649893
-    second: cabalSPRITE_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -116,7 +110,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 780
+        width: 673
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -135,9 +129,9 @@ TextureImporter:
       name: cabalSPRITE_1
       rect:
         serializedVersion: 2
-        x: 780
+        x: 673
         y: 0
-        width: 728
+        width: 673
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -156,9 +150,9 @@ TextureImporter:
       name: cabalSPRITE_2
       rect:
         serializedVersion: 2
-        x: 1518
+        x: 1346
         y: 0
-        width: 738
+        width: 673
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -177,9 +171,9 @@ TextureImporter:
       name: cabalSPRITE_3
       rect:
         serializedVersion: 2
-        x: 2263
+        x: 2019
         y: 0
-        width: 723
+        width: 673
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -198,9 +192,9 @@ TextureImporter:
       name: cabalSPRITE_4
       rect:
         serializedVersion: 2
-        x: 2984
+        x: 2692
         y: 0
-        width: 702
+        width: 673
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -219,10 +213,10 @@ TextureImporter:
       name: cabalSPRITE_5
       rect:
         serializedVersion: 2
-        x: 3683
+        x: 3365
         y: 0
-        width: 733
-        height: 1076
+        width: 673
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,7 +233,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 480b5a1a4a0703c49ba24d2985bac91a
+    spriteID: e1bc6692e847cc348b4902167ea44c47
     internalID: 0
     vertices: []
     indices: 
