@@ -11,12 +11,15 @@ public class LevelManager : Singleton<LevelManager>
 
     public Button button1;
     public Button button2;
-    public List<Card> cards;
+    public List<List<Card>> cards;
     private int contador;
+    private float maxQuestionsNum;
     private UiManager uiManager;
     private ReadData readData;
     private GameManager gameManager;
+
     public int levelNumber = new int();
+
     //public AudioSource duqueQuote;
     //Duque
     [SerializeField] private Animator duqueAnimator;
@@ -24,7 +27,9 @@ public class LevelManager : Singleton<LevelManager>
     void Start()
     {
         Addlisteners();
-        uiManager.SetUiTexts(UiManager.TextUiType.Year, "<w>AÑO # " + (InfoHack.levelNumber+1));
+        uiManager.SetUiTexts(UiManager.TextUiType.Year, "<w>AÑO # " + (InfoHack.levelNumber + 1));
+
+        gameManager.progress = (InfoHack.questionNum / maxQuestionsNum) * 100;
     }
 
     private void Awake()
@@ -36,39 +41,38 @@ public class LevelManager : Singleton<LevelManager>
     public void InitializeVariables()
     {
         contador = 0;
+
         uiManager = UiManager.Instance;
         readData = ReadData.Instance;
         gameManager = GameManager.Instance;
+
+        cards = new List<List<Card>>();
+
+        cards.Add(readData.LoadData(ReadData.Level.Level1));
+        cards.Add(readData.LoadData(ReadData.Level.Level2));
+        cards.Add(readData.LoadData(ReadData.Level.Level3));
+
+        foreach (var t in cards)
+        {
+            maxQuestionsNum += t.Count;
+        }
     }
 
     public void LoadQuestions()
     {
-        cards = new List<Card>();
         int level = (InfoHack.levelNumber + 1);
 
         if (level == 1)
         {
-            cards = readData.LoadData(ReadData.Level.Level1);
-
-        }
-        else
-        {
-            if (level == 2)
-            {
-                cards = readData.LoadData(ReadData.Level.Level2);
-            }
-            else
-            {
-                cards = readData.LoadData(ReadData.Level.Level3);
-            }
+            InfoHack.questionNum = 0;
         }
 
         contador = 0;
 
-        uiManager.SetUiTexts(UiManager.TextUiType.Question, cards[contador].questionString);
-        uiManager.SetUiTexts(UiManager.TextUiType.Button_1, cards[contador].decisions[0].decisionString);
-        uiManager.SetUiTexts(UiManager.TextUiType.Button_2, cards[contador].decisions[1].decisionString);
-        uiManager.SetCharacter(cards[0].CharacterName);
+        uiManager.SetUiTexts(UiManager.TextUiType.Question, cards[levelNumber][contador].questionString);
+        uiManager.SetUiTexts(UiManager.TextUiType.Button_1, cards[levelNumber][contador].decisions[0].decisionString);
+        uiManager.SetUiTexts(UiManager.TextUiType.Button_2, cards[levelNumber][contador].decisions[1].decisionString);
+        uiManager.SetCharacter(cards[levelNumber][0].CharacterName);
     }
 
     public void Addlisteners()
@@ -79,35 +83,41 @@ public class LevelManager : Singleton<LevelManager>
 
     private void LeftAnswer()
     {
-        cards[contador].decisions[0].consequence.ApplyConsequence();
-        cards.RemoveAt(contador);
+        cards[levelNumber][contador].decisions[0].consequence.ApplyConsequence();
+        cards[levelNumber].RemoveAt(contador);
         NextQuestion();
     }
 
     private void RightAnswer()
     {
-        cards[contador].decisions[1].consequence.ApplyConsequence();
-        cards.RemoveAt(contador);
+        cards[levelNumber][contador].decisions[1].consequence.ApplyConsequence();
+        cards[levelNumber].RemoveAt(contador);
         NextQuestion();
     }
 
     public void NextQuestion()
     {
+        InfoHack.questionNum++;
+        gameManager.progress = (InfoHack.questionNum / maxQuestionsNum) * 100;
+        Debug.Log(
+            $"questionNUm{InfoHack.questionNum} maxque {maxQuestionsNum}, progress{(InfoHack.questionNum / maxQuestionsNum)}");
+
         StartCoroutine(DuqueAnimationCoroutine());
-        //contador++;
-        if (contador > cards.Count - 1)
+        // contador++;
+        if (contador > cards[levelNumber].Count - 1)
         {
             contador = 0;
             gameManager.WinGame();
         }
         else
         {
-            uiManager.SetUiTexts(UiManager.TextUiType.Question, cards[contador].questionString);
-            uiManager.SetUiTexts(UiManager.TextUiType.Button_1, cards[contador].decisions[0].decisionString);
-            uiManager.SetUiTexts(UiManager.TextUiType.Button_2, cards[contador].decisions[1].decisionString);
-            uiManager.SetCharacter(cards[contador].CharacterName);
+            uiManager.SetUiTexts(UiManager.TextUiType.Question, cards[levelNumber][contador].questionString);
+            uiManager.SetUiTexts(UiManager.TextUiType.Button_1,
+                cards[levelNumber][contador].decisions[0].decisionString);
+            uiManager.SetUiTexts(UiManager.TextUiType.Button_2,
+                cards[levelNumber][contador].decisions[1].decisionString);
+            uiManager.SetCharacter(cards[levelNumber][contador].CharacterName);
         }
-
     }
 
     public void ExecuteDuqueQuote()

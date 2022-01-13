@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿
+using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

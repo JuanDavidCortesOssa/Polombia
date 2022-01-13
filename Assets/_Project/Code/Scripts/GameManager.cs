@@ -8,7 +8,14 @@ namespace Polombia
 {
     public class GameManager : Singleton<GameManager>
     {
-        public enum Characters {Petro, Vicky, Martuchis, mafer, ElPaisa}
+        public enum Characters
+        {
+            Petro,
+            Vicky,
+            Martuchis,
+            mafer,
+            ElPaisa
+        }
 
         private List<CharacterSO> characterSOs;
         private List<Character> characters;
@@ -21,7 +28,21 @@ namespace Polombia
         public event Action<float> OnBudgetChanged;
         public event Action<float> OnSupportChanged;
         public event Action<float> OnApprovalChanged;
+        public event Action<float> OnProgressChanged;
+
         public event Action OnBarEmpty;
+
+        private float _progress;
+
+        public float progress
+        {
+            set
+            {
+                _progress = Mathf.Clamp(value, 0, 100);
+                OnProgressChanged.Invoke(_progress);
+            }
+            get { return _progress; }
+        }
 
         private float _budget;
 
@@ -31,7 +52,7 @@ namespace Polombia
             {
                 _budget = Mathf.Clamp(value, 0, 100);
                 OnBudgetChanged.Invoke(_budget);
-                if(_budget == 0)
+                if (_budget == 0)
                 {
                     OnBarEmpty.Invoke();
                 }
@@ -77,11 +98,11 @@ namespace Polombia
         {
             AddListeners();
             sceneManager = SceneManager.Instance;
+            
         }
 
         private void Start()
         {
-            
         }
 
         private void AddListeners()
@@ -98,7 +119,10 @@ namespace Polombia
         public void ChangeSupport(float value) => support = value;
 
         [Button]
-        public void Changepproval(float value) => approval = value;
+        public void ChangeApproval(float value) => approval = value;
+
+        [Button]
+        public void ChangeProgress(float value) => progress = value;
 
         public void LoseGame()
         {
